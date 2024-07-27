@@ -6,7 +6,5 @@ def home_page_view(request):
     page_visit = PageVisit.objects.filter(path=request.path)
     page_visit_total = PageVisit.objects.all()
     page_visit_create = PageVisit.objects.create()
-    my_context = {
-        'page_visit': page_visit
-    }
-    return render(request, 'home.html', my_context)
+    
+    return render(request, 'home.html', my_context = {'page_visit': page_visit})
