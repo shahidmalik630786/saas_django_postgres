@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+from decouple import config
 from pathlib import Path
 import os
 
@@ -22,10 +23,14 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ws4^niyyz%kw-n3-t0rf91+3f^xj02=kr7h!p*pwd9x7rro6%k'
+
+SECRET_KEY = config("DJANGO_SECRET_KEY2", default = None)
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DJANGO_DEBUG", cast = bool)
+
+print(DEBUG)
 
 ALLOWED_HOSTS = [".railway.app" #https://saas.prod.railway.app
                  ]
