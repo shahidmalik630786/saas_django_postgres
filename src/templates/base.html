@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block head_title %}Saas{% endblock %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"  rel="stylesheet" />
+    {% comment %} <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"  rel="stylesheet" /> {% endcomment %}
+    <link href="{% static '/vendor/flowbite.css' %}"  rel="stylesheet" />
 </head>
 <body>
     {% include 'base/navbar.html' %}
     {% block content %}
     
     {% endblock content %}
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script> {% endcomment %}
+    <script src="{% static '/vendor/flowbite.js' %}"></script>
+
 </body>
 </html>
