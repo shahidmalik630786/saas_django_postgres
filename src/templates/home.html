@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>hello world</h1>
-<h3>{{page_visit_count}}</h3>
-<h3>{{percent}}</h3>
-<h3>{{total_visit_count}}</h3>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block head_title %}Saas{% endblock %}
+{% block content %}
+<h1 class="text-3xl text-green-800" >hello world</h1>
+    <h3>{{page_visit_count}}</h3>
+    <h3>{{percent}}</h3>
+    <h3>{{total_visit_count}}</h3>
+{% endblock %}

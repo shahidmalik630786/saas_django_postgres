@@ -1,3 +1,6 @@
+#ignore static vendor
+src/static/vendor
+
 venv/
 
 # Byte-compiled / optimized / DLL files
