@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block head_title %}Saas{% endblock %}</title>
-    {% comment %} <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"  rel="stylesheet" /> {% endcomment %}
     <link href="{% static '/vendor/flowbite.css' %}"  rel="stylesheet" />
 </head>
 <body>
@@ -12,7 +11,6 @@
     {% block content %}
     
     {% endblock content %}
-    {% comment %} <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script> {% endcomment %}
     <script src="{% static '/vendor/flowbite.js' %}"></script>
 
 </body>
