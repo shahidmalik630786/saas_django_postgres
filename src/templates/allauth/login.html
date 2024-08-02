@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block head_title %}Saas{% endblock %}
+{% block content %}
+<form action="/login/" method="post">
+    {% csrf_token %}
+    <input type="text" name="user" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Login</button>
+</form>
+{% endblock %}

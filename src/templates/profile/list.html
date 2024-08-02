@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% load socialaccount %}
+{% block head_title %}Saas{% endblock %}
+{% block content %}
+<h1 class="text-lg font-medium">Users</h1>
+{% if perms.auth %}
+{% if  perms.auth.view_user %}
+<div>
+    {% for instance in object_list %}
+    <li><a href="/profile/username/{{instance.username}}">{{instance.username}}</a></li>
+    {% endfor %}
+</div>
+<div>
+    {{instance.first_name}} - {{instance.last_name}}
+    {{instance.last_login}}
+</div>
+{% else %}
+<h1>You are not allowed to see this</h1>
+{% endif %}
+{% endif %}
+{% endblock %}

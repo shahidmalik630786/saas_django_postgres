@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block head_title %}Saas{% endblock %}</title>
+    
     <link href="{% static '/vendor/flowbite.css' %}"  rel="stylesheet" />
 </head>
 <body>
-    {% include 'base/navbar.html' %}
+    {% include 'nav/navbar.html' %}
     {% block content %}
     
     {% endblock content %}
