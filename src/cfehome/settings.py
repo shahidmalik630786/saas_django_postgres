@@ -75,6 +75,7 @@ INSTALLED_APPS = [
     "profiles",
     "commando",
     "helpers",
+    "customers",
 
 ]
 
